@@ -6,8 +6,9 @@ project:
         api_version: '49.0'
     dependencies:
         - github: 'https://github.com/SalesforceFoundation/NPSP'
+        - github: 'https://github.com/donaldrivard/Food-Bank-Implementation'
     git:
-    source_format: sfdx
+    source_format: sfdx 
 
 tasks:
     robot:
@@ -24,3 +25,11 @@ tasks:
     run_tests:
         options:
             required_org_code_coverage_percent: 75
+sources:
+        npsp:
+            github: https://github.com/SalesforceFoundation/NPSP
+flows:
+    dependencies:
+        steps:
+            3:
+                flow: npsp:config_managed
